@@ -1,16 +1,16 @@
-# Javier Duszynski
-# This program is a simple quiz game about random topics (its mostly python
-# related for this sprint) (Keeping this idea for sprint 2 as well),
-# but there is some bonus stuff at the end too
-# I will modify the form and subject in future builds (it's in development).
-# THIS VERSION OF THE PROJECT IS A DRAFT THAT WAS ADDED TO OVER TIME, AND IT
-# WAS MADE WITH THE INTENTION TO SATISFY SPRINT INSPECTION 2
-# (INCOMPLETE FOR ANYTHING BEYOND) (ENTIRE PROJECT IS SUBJECT TO CHANGE FOR
-# LATER SUBMISSIONS)
-# Citations for helpers and sources: Malakai Dragstrem, Erick Rodriguez,
-# Pogils 1-17, W3 Schools
+"""My Quizzical Integration ProjectThis program is a simple quiz game about
+Python and other random topics) Citations for helpers and sources: Malakai
+Dragstrem, Erick Rodriguez,
+Pogils 1-17, W3 Schools"""
+__author__ = "Javier Duszynski"
+
 
 def main():
+    """The purpose of this main function is a quiz program that asks the
+    user various questions and then takes in user input to return answers.
+    The program runs in a while loop to continue until user enters the input no
+    when prompted.
+    """
     print("Welcome to my integration project!")
     user_name = input("Enter name: ")
     continue_program = True
@@ -307,7 +307,7 @@ def main():
                                  "binary numbers 111100 and 1000110 "))
             # The "and" operator here specifies that the input has to fall
             # into two categories at the same time to be correct
-            if binary_2 > 60 and binary_2 < 70:
+            if 60 < binary_2 < 70:
                 print("Excellent!")
             else:
                 print("Not quite. Touch up on your binary!")
@@ -318,12 +318,19 @@ def main():
 
 # This function with parameter passing displays a cheeky "Hello There" at
 # the start of the program
-def ObiWan(hello):
+def obiwan(hello):
+    """This program greets the user upon running the program with the
+    message 'Hello There'
+
+    :param hello:
+    :return: Hello There
+    """
     #       ^ parameter
     return '{} There'.format(hello)
 
 
-print(ObiWan('Hello'))
+print(obiwan('Hello'))
 #              ^ argument
 # CALL TO MAIN
-main()
+if __name__ == "__main__":
+    main()
