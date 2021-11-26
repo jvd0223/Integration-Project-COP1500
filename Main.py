@@ -1,4 +1,4 @@
-"""My Quizzical Integration ProjectThis program is a simple quiz game about
+"""My Quizzical Integration Project. This program is a simple quiz game about
 Python and other random topics) Citations for helpers and sources: Malakai
 Dragstrem, Erick Rodriguez,
 Pogils 1-17, W3 Schools"""
