@@ -1,7 +1,9 @@
-"""My Quizzical Integration Project. This program is a simple quiz game about
-Python and other random topics) Citations for helpers and sources: Malakai
-Dragstrem, Erick Rodriguez,
-Pogils 1-17, W3 Schools"""
+"""My Quizzical Integration Project. This program is a simple quiz game
+about Python and other random topics) Citations for helpers and sources:
+Malakai Dragstrem, Erick Rodriguez, Pogils 1-17, W3 Schools,
+and 101computing for the idea of creating a function to validate user integer
+input
+"""
 __author__ = "Javier Duszynski"
 
 
@@ -11,7 +13,7 @@ def main():
     The program runs in a while loop to continue until user enters the input no
     when prompted.
     """
-    print("Welcome to my integration project!")
+    print("\nWelcome to my integration project!\n")
     user_name = input("Enter name: ")
     continue_program = True
     # The "While" loop here runs the program until the user kills the
@@ -19,7 +21,7 @@ def main():
     while continue_program:
         play = input(
             "\nI want to play a game.\nPlay this quiz? If you don't want to "
-            "play, enter no otherwise press enter ")
+            "play, enter no, otherwise press enter ")
         if play.lower() == "no":
             # here the relational operator "==" in "== "no"" verifies that if
             # the user enters "no" the program ends
@@ -27,7 +29,7 @@ def main():
         else:
             print("\nThen good luck", user_name)
             print("After entering your answer continue to press enter to "
-                  "get to the next question or to move through the quiz. ")
+                  "get to the next question, or to move through the quiz. ")
 
             input("\nPress enter when ready ")
             # Here I assign player score to the value 0
@@ -46,7 +48,9 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was *")
 
+            print("\nPress Enter to continue\n")
             input(" ")
+
             print("\nQuestion 2:\n")
             print("Hi", user_name, sep='')
             # I use sep='' here to change the comma's functionality
@@ -60,6 +64,7 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was sep=''")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 3:\n")
@@ -80,6 +85,7 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was end=''")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 4:\n")
@@ -93,11 +99,12 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was +")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 5:\n")
-            question_input_1 = int(input("Enter a whole number "))
-            question_input_2 = int(input("Enter another whole number "))
+            question_input_1 = validate_int("Enter a whole number ")
+            question_input_2 = validate_int("Enter another whole number ")
             print("\nPython computes the two numbers and outputs...")
             print(question_input_1 * question_input_2)
             # Here I used the * numeric operator to make the program
@@ -110,11 +117,12 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was *")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 6:\n")
-            question_input_1 = int(input("Enter a whole number "))
-            question_input_2 = int(input("Enter another whole number "))
+            question_input_1 = validate_int("Enter a whole number ")
+            question_input_2 = validate_int("Enter another whole number ")
             print("\nPython computes the two numbers and outputs...")
             print(question_input_1 ** question_input_2)
             # Here I used the ** numeric operator to make the program
@@ -127,11 +135,12 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was **")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 7:\n")
-            question_input_1 = int(input("Enter a whole number "))
-            question_input_2 = int(input("Enter another whole number "))
+            question_input_1 = validate_int("Enter a whole number ")
+            question_input_2 = validate_int("Enter another whole number ")
             print("\nPython computes the two numbers and outputs...")
             print(question_input_1 - question_input_2)
             # Here I used the - numeric operator to make the program
@@ -144,11 +153,12 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was -")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 8:\n")
-            question_input_1 = int(input("Enter a whole number "))
-            question_input_2 = int(input("Enter another whole number "))
+            question_input_1 = validate_int("Enter a whole number ")
+            question_input_2 = validate_int("Enter another whole number ")
             print("\nPython computes the two numbers and outputs...")
             print(question_input_1 / question_input_2)
             # Here I used the / numeric operator to make the program divide
@@ -161,14 +171,15 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was /")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 9:\n")
-            question_input_1 = int(input("Enter a whole number "))
-            question_input_2 = int(input(
+            question_input_1 = validate_int("Enter a whole number ")
+            question_input_2 = validate_int(
                 "Enter a whole number that does not go into the first number "
                 "an equal\n "
-                "amount of times "))
+                "amount of times ")
             print("\nPython computes the two numbers and outputs...")
             print(question_input_1 // question_input_2)
             # Here I used the // numeric operator to make the program divide
@@ -181,14 +192,15 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was //")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 10:\n")
-            question_input_1 = int(input("Enter a whole number "))
-            question_input_2 = int(input(
+            question_input_1 = validate_int("Enter a whole number ")
+            question_input_2 = validate_int(
                 "Enter a whole number that does not go into the first number "
                 "an equal\n "
-                "amount of times "))
+                "amount of times ")
             print("\nPython computes the two numbers and outputs...")
             print(question_input_1 % question_input_2)
             # Here I used the % numeric operator to make the program divide
@@ -202,6 +214,7 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was %")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nQuestion 11: Bonus Question!:\n")
@@ -214,16 +227,18 @@ def main():
             else:
                 print("Nope, that's incorrect! The answer was incorrectly")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("You got " + str(
-                player_score) + " questions right!! good job!")
+                player_score) + " questions right!!")
             print("You received a " + str((player_score / 11) * 100) + "%!")
             # Here I divide player score by 11 and multiply it by 100 to get
             # a percentage.
 
             print("\nContinue on for some bonus activities")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nBonus Stuff!:\n")
@@ -237,6 +252,7 @@ def main():
             else:
                 print("Ehh not bad. Not my cup of tea though")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nCan you guess the function used to create this list?\n")
@@ -253,10 +269,11 @@ def main():
             else:
                 print("Epic")
 
+            print("\nPress Enter to continue\n")
             input(" ")
 
             print("\nProvide the number of the month of your birthday.\n")
-            month = int(input("Enter a month number from 1-12: "))
+            month = validate_int("Enter a month number from 1-12: ")
             # The boolean operator "or" is used here to define the
             # boundaries of input I am looking for
             if month > 12 or month < 1:
@@ -288,6 +305,7 @@ def main():
 
             print("\nBirthstone months are according to gemsociety.org")
 
+            print("\nPress Enter to continue\n")
             input("")
 
             print(not False)
@@ -301,35 +319,55 @@ def main():
             else:
                 print("Nah")
 
+            print("\nPress Enter to continue\n")
+            input("")
+
             print("\nLastly, binary.\n")
 
-            binary_2 = int(input("Enter a base 10 number that is between the "
-                                 "binary numbers 111100 and 1000110 "))
+            binary = validate_int("Enter a base 10 number that is between the "
+                                  "binary numbers 111100 and 1000110 ")
             # The "and" operator here specifies that the input has to fall
             # into two categories at the same time to be correct
-            if 60 < binary_2 < 70:
+            if 60 < binary < 70:
                 print("Excellent!")
             else:
                 print("Not quite. Touch up on your binary!")
+
+            print("\nQuiz End.\n")
 
             input("\nThat's all for now folks!, thanks for playing!\nPress "
                   "Enter to play again ")
 
 
-# This function with parameter passing displays a cheeky "Hello There" at
-# the start of the program
-def obiwan(hello):
-    """This program greets the user upon running the program with the
+def validate_int(message):
+    """This function makes sure that the program does not crash when the
+    user does not enter a whole number in the correct form when prompted.
+
+    :param message:
+    :return:
+    """
+    input_is_invalid = True
+    while input_is_invalid:
+        try:
+            user_input = int(input(message))
+        except ValueError:
+            print("Error. Please enter a base 10 whole number without using "
+                  "alphabetic characters.")
+        else:
+            return user_input
+
+
+def greeting(hello):
+    """This function greets the user upon running the program with the
     message 'Hello There'
 
     :param hello:
     :return: Hello There
     """
-    #       ^ parameter
     return '{} There'.format(hello)
 
 
-print(obiwan('Hello'))
+print(greeting('Hello'))
 #              ^ argument
 # CALL TO MAIN
 if __name__ == "__main__":
